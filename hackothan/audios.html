@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Welcome to RGMCET</title>
+    <style>
+      body {
+        font-family: "Courier New",Courier , monpspace;
+        background-color: grey;
+      }
+	  
+      h1{
+        color:black ;
+        text-align: center;
+        margin-top: 30px;
+		font-family : "Courier New",Courier , monpspace;
+      }
+	  h3{
+		color: #98FB98;
+		font-family:"Courier New",Courier , monospace;
+	}
+	.divl{
+		float : left;
+		width:50%;
+		height:90%;
+		}
+      
+      audio {
+        display: block;
+        margin: 0 auto;
+ 
+        border-radius: 5px;
+      }
+	  .divr{
+		float:right;
+		width:50%;
+		height:90%;
+		}
+      
+      video:hover, audio:hover {
+        border-color: #666;
+      }
+    </style>
+  </head>
+  <body>
+	<marquee ><h3>TECH-TITANS-ENTERTAINMENT</h3></marquee>
+	<h1> STREAM PLAY </h1>
+	
+
+    <h1><i>AUDIO PLAYER</i></h1>
+	<div class="divl">
+		<img src="https://d2r2uu70m3d23r.cloudfront.net/music%20player.jpg" />
+	</div>
+	<div class="divr">
+    <audio controls>
+      <source src="https://dhhc07skuffs6.cloudfront.net/Jab%20Tak%20-%20Redux%20(M%20S%20Dhoni%20-%20The%20Untold%20Story)%20128%20(1).mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+	<p align = "center">Jab-Tak M.S.Dhoni</p>
+	<br><br>
+    <audio controls>
+      <source src="https://dp60zt9xrtxyw.cloudfront.net/Chal%20Chalo%20Chalo.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+	<p align = "center">Chal Chalo -Son of Sathya Murthy</P>
+	<br><br>
+    <audio controls>
+      <source src="https://dp60zt9xrtxyw.cloudfront.net/Gundellonaa.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+	<p align="center">Gundellona - Ori Devuda</p>
+	<br><br>
+    <audio controls>
+      <source src="https://dp60zt9xrtxyw.cloudfront.net/Justin%20Bieber%20Baby.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+	<p align = "center">Justin Beiber</p>
+	<br><br>
+	<audio controls>
+      <source src="https://dp60zt9xrtxyw.cloudfront.net/Poonakaalu%20Loading.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+	<p align = "center">Poonakaalu - Loading</p>
+	<br><br>
+	</div>
+	<script type="text/JavaScript">
+	var audios = document.querySelectorAll('audio');
+
+// Loop through all audio elements and add a listener for when an audio starts playing
+for (var i = 0; i < audios.length; i++) {
+  audios[i].addEventListener('play', function() {
+    // Pause all other audio elements
+    for (var j = 0; j < audios.length; j++) {
+      if (audios[j] != this) {
+        audios[j].pause();
+      }
+    }
+  });
+}
+
+    </script>
+  </body>
+</html>
